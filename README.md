@@ -8,8 +8,7 @@ Play the Catchphrase game.
 - /images
 - catchphrase_module.py
 - catchphrase_gui.py
-- test_catchphrase_module.py
-- test_catchphrase_gui.py
+- test_catchphrase.py
 - requirements.txt
 
 Required packages are listed under ```requirements.txt```.
