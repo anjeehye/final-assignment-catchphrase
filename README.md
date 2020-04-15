@@ -1,22 +1,23 @@
 # Catchphrase
 
-description
+Play the Catchphrase game.
 
-## Contents
+## Getting Started
+
+### Contents
+- /images
 - catchphrase_module.py
-- catchphrase_gui_module.py
-- catchphrase.py
+- catchphrase_gui.py
+- test_catchphrase_module.py
+- test_catchphrase_gui.py
+- requirements.txt
+
+Required packages are listed under ```requirements.txt```.
 
 ## Instructions
-
-### Preparation
-
-* Place your image in the 'images' folder.
-* 
-
-### Playing Catchphrase
-There are two ways of playing the catchphrase game.
-
-1. On the Python console.
-
-2. Using GUI
+Place your image file in the ```/images``` folder.
+Open ```catchphrase_gui.py```, play the Catchphrase game using the following command:
+```
+play_catchphrase_gui(filename, reveal_number)
+```
+If ```reveal_number``` is left empty, 3 pieces will be revealed by default.
