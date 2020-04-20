@@ -1,5 +1,5 @@
 """
-Documentation
+Testing the script using pytest.
 """
 
 import os
@@ -12,12 +12,10 @@ import catchphrase_module
 
 # %% Different Image Types
 """
-Checks whether the individual modules work well
-
-Check if the last item of the list is identical to the original image
-
-Image comparison
-https://matplotlib.org/3.1.1/api/testing_api.html#matplotlib.testing.decorators.image_comparison
+Imports images from the 'images/test_images' folder, which contains a
+rgb and a greyscale images. Then checks whether the images were imported
+successfully by comparing the original image to the last item of the list 
+returned by the catchphrase_main() function.
 """
 
 test_image_folder = 'test_images'
@@ -26,23 +24,23 @@ def test_catchphrase_image_color() :
     # Test color image
     test_filename = 'test_image_color.jpeg'
     test_img = os.path.join(test_image_folder, test_filename)
-    result = catchphrase_module.catchphrase_main(test_img)
-    # The last item of the list  identical to the original image
     test_path = os.path.join('images', test_img)
-    img = imageio.imread(test_path)
-    assert (result[4] == img).all() == True
+    result = catchphrase_module.catchphrase_main(test_img)
+    original_img = imageio.imread(test_path)
+    assert (result[4] == original_img).all() == True
 
 def test_catchphrase_image_bw() :
     # Test greyscale image
     test_filename = 'test_image_greyscale.jpeg'
     test_img = os.path.join(test_image_folder, test_filename)
-    result = catchphrase_module.catchphrase_main(test_img)
     test_path = os.path.join('images', test_img)
-    img = imageio.imread(test_path)
-    assert (result[4] == img).all() == True
+    result = catchphrase_module.catchphrase_main(test_img)
+    # read original image
+    original_img = imageio.imread(test_path)
+    assert (result[4] == original_img).all() == True
 
 
-# %% Testing invalid arguments
+# %% Testing Errors
 
 filename = 'at.jpg'
 

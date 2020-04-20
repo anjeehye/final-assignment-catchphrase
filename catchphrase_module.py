@@ -192,7 +192,7 @@ def catchphrase_main(filename, reveal_number=3):
 if __name__ == '__main__':
     # Test the catchphrase_main function using pyplot.
 
-    catchphrase_images = catchphrase_main('cd.jpg')
+    catchphrase_images = catchphrase_main('at.jpg')
     reveal_length = len(catchphrase_images)
 
     if len(catchphrase_images[0].shape) == 2:
