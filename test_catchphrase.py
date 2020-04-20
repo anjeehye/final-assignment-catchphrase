@@ -59,12 +59,3 @@ def test_catchphrase_gui_invalid_zero_reveal_number() :
 def test_catchphrase_gui_invalid_too_bit_reveal_number() :
     with pytest.raises(ValueError) :
         catchphrase_module.catchphrase_main(filename, 10)
-
-# %% Style check
-#! pycodestyle catchphrase_module.py
-#! pycodestyle catchphrase_gui.py
-#
-## Covergae
-#! pytest --cov
-#! pytest --cov-report term-missing --cov
-#! coverage report -m

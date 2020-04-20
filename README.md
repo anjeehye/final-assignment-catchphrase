@@ -1,6 +1,8 @@
 # Catchphrase
 
-Play the Catchphrase game.
+Play the Catchphrase game on a GUI.
+
+An image is hidden behind a black mask. The image is divided into 9 rectangular pieces, and each piece is revealed in turn until one of the contestants is able to identify the image.
 
 ## Getting Started
 
