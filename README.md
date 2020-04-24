@@ -21,7 +21,5 @@ Open ```catchphrase_gui.py```, play the Catchphrase game using the following com
 ```
 play_catchphrase_gui(filename, reveal_number)
 ```
-* filename: string, name of the image file you want to show
-* reveal_number: number of pieces to be revealed
-
-If ```reveal_number``` is left empty, 3 pieces will be revealed by default.
+* ```filename```: string, name of the image file you want to show
+* ```reveal_number```: number of pieces to be revealed (if left empty, 3 pieces will be revealed by default)
